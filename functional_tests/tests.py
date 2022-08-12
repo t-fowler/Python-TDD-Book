@@ -43,7 +43,7 @@ class NewVisitorTest(LiveServerTestCase):
         input_box = self.browser.find_element(By.ID, 'id_new_item')
         self.assertEqual(
             input_box.get_attribute('placeholder'),
-            'Enter a to-do item'
+            'Start a new To-Do list.'
         )
 
         # She types "Buy peacock feathers" into the text box.
