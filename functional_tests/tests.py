@@ -91,7 +91,7 @@ class NewVisitorTest(LiveServerTestCase):
         
         # On Francis' home page, Edith's list does not appear to him.
         self.browser.get(self.live_server_url)
-        page_text = self.browser.find_element(By.TAG_NAME, 'body')
+        page_text = self.browser.find_element(By.TAG_NAME, 'body').text
         self.assertNotIn('Buy peacock feathers', page_text)
         self.assertNotIn('Make peacock feather flies', page_text)
 
