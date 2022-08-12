@@ -14,7 +14,7 @@ class NewVisitorTest(LiveServerTestCase):
         self.browser.quit()
 
     def check_for_row_in_list_table(self, row_text):
-        table = self.browser.find_element_by_id('id_list_table')
+        table = self.browser.find_element(By.ID, 'id_list_table')
         rows = table.find_elements(By.TAG_NAME, 'tr')
         self.assertIn(row_text, [row.text for row in rows])
 
@@ -25,11 +25,11 @@ class NewVisitorTest(LiveServerTestCase):
 
         # She notices the page title and header mention to-do lists.
         self.assertIn('To-Do', self.browser.title)
-        header_text = self.browser.find_element_by_tag_name('h1').text
+        header_text = self.browser.find_element(By.TAG_NAME, 'h1').text
         self.assertIn('To-Do', header_text)
 
         # She is invited to enter a to-do item right away.
-        input_box = self.browser.find_element_by_id('id_new_item')
+        input_box = self.browser.find_element(By.ID, 'id_new_item')
         self.assertEqual(
             input_box.get_attribute('placeholder'),
             'Enter a to-do item'
@@ -47,7 +47,7 @@ class NewVisitorTest(LiveServerTestCase):
 
         # There is still a text box, inviting her to add another item. She
         # enters "Make peacock feather flies".
-        input_box = self.browser.find_element_by_id('id_new_item')
+        input_box = self.browser.find_element(By.ID, 'id_new_item')
         self.assertEqual(
             input_box.get_attribute('placeholder'),
             'Enter a to-do item'
