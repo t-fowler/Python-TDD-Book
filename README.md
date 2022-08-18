@@ -5,6 +5,7 @@ code from the book, as is permitted, but I have endeavoured to modify and enhanc
 as applicable in order to apply the learned concepts.
 
 The largest changes come from using upgraded versions of Django and Bootstrap.
+    
     * Django has been updated from version 3 to version 4.
         * Changes to how urls are bound.
     * Bootstrap updated from version 3 to version 5.
