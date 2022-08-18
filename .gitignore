@@ -3,3 +3,8 @@ geckodriver.log
 virtualenv
 __pycache__
 *.pyc
+.vscode/
+.DS_Store
+Pipfile
+Pipfile.lock
+lists/.DS_Store
