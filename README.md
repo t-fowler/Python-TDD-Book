@@ -6,8 +6,8 @@ as applicable in order to apply the learned concepts.
 
 The largest changes come from using upgraded versions of Django and Bootstrap.
     
-    * Django has been updated from version 3 to version 4.
-        * Changes to how urls are bound.
-    * Bootstrap updated from version 3 to version 5.
-        * Classes have been altered.
-        * "jumbotron" is now deprecated and is replaced with Utilities.
+* Django has been updated from version 3 to version 4.
+    * Changes to how urls are bound.
+* Bootstrap updated from version 3 to version 5.
+    * Classes have been altered.
+    * "jumbotron" is now deprecated and is replaced with Utilities.
