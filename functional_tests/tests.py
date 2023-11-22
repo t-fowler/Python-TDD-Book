@@ -94,7 +94,7 @@ class NewVisitorTest(LiveServerTestCase):
 
         # Francis starts a new list by entering a new item.
         inputbox = self.browser.find_element(By.ID, 'id_new_item')
-        inputbox.send_keys('Buy Milk')
+        inputbox.send_keys('Buy milk')
         inputbox.send_keys(Keys.ENTER)
         self.wait_for_row_in_list_table('1: Buy milk')
 
@@ -104,7 +104,7 @@ class NewVisitorTest(LiveServerTestCase):
         self.assertNotEqual(francis_list_url, edith_list_url)
 
         # Again, there is no trace of Edith's list.
-        page_text = self.browser.find_element(By.TAG_NAME('body')).text
+        page_text = self.browser.find_element(By.TAG_NAME, 'body').text
         self.assertNotIn('Buy peacock feathers', page_text)
         self.assertIn('Buy milk', page_text)
 
